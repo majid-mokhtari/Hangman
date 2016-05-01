@@ -1,6 +1,7 @@
 package com.majidmokhtari.hangman.ui.model;
 
 import android.content.Context;
+import android.graphics.Typeface;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -32,6 +33,7 @@ public class CustomGridAdapter extends BaseAdapter{
         }
         final Button button = (Button) convertView.findViewById(R.id.grid_item);
         button.setText(items[position]);
+        button.setTypeface(null, Typeface.BOLD);
         button.setOnClickListener(new View.OnClickListener() {
 
             @Override

@@ -19,7 +19,9 @@ public class Game {
 
     public Game(String answer){
         mAnswer = answer;
+
         mHits = "";
+
         mMisses = "";
         mCounter = 0;
     }
@@ -47,4 +49,19 @@ public class Game {
         return progress;
     }
 
+    public String getHits() {
+        return mHits;
+    }
+
+    public void setHits(String hits) {
+        mHits = hits;
+    }
+
+    public String getAnswer() {
+        return mAnswer;
+    }
+
+    public void setAnswer(String answer) {
+        mAnswer = answer;
+    }
 }

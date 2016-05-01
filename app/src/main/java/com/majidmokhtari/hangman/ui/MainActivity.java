@@ -11,6 +11,7 @@ import com.majidmokhtari.hangman.R;
 public class MainActivity extends AppCompatActivity {
 
     private Button mCountriesBtn;
+    private Button mAnimalsBtn;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -18,12 +19,20 @@ public class MainActivity extends AppCompatActivity {
         setContentView(R.layout.activity_main);
 
         mCountriesBtn = (Button)findViewById(R.id.conurtiesCat);
+        mAnimalsBtn = (Button)findViewById(R.id.animalsCat);
 
         mCountriesBtn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 String category = mCountriesBtn.getText().toString();
-                //Toast.makeText(MainActivity.this, category, Toast.LENGTH_LONG).show();
+                startStory(category);
+            }
+        });
+
+        mAnimalsBtn.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                String category = mAnimalsBtn.getText().toString();
                 startStory(category);
             }
         });

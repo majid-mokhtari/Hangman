@@ -15,42 +15,50 @@
                   android:id="@+id/drawHangman">
     </LinearLayout>
 
-    <GridView
-        android:layout_width="wrap_content"
-        android:layout_height="110dp"
-        android:id="@+id/btnsGridView"
-        android:numColumns="10"
-        android:layout_alignParentBottom="true"
-        android:layout_alignParentLeft="true"
-        android:layout_alignParentStart="true"/>
+    <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                  android:layout_width="match_parent"
+                  android:layout_height="match_parent"
+                  android:orientation="vertical">
 
-    <TextView
-        android:text="@string/hello_world"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:id="@+id/answer"
-        android:textSize="20dp"
-        android:gravity="center"
-        android:layout_above="@+id/btnsGridView"
-        android:layout_alignParentLeft="true"
-        android:layout_alignParentStart="true"
-        android:layout_marginBottom="32dp"/>
+            <TextView
+                android:text="@string/hello_world"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:id="@+id/answer"
+                android:textSize="20dp"
+                android:gravity="bottom|center"
+                android:layout_weight="1"
+                android:layout_alignParentLeft="true"
+                android:layout_alignParentStart="true"
+                android:layout_marginBottom="32dp"/>
 
-    <Button
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:visibility="gone"
-        android:layout_above="@+id/playAgainBtn"
-        android:text="Search the Word"
-        android:id="@+id/searchWordBtn"
-        android:layout_gravity="center_horizontal"/>
+            <Button
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_above="@+id/playAgainBtn"
+                android:text="Search the Word"
+                android:visibility="gone"
+                android:id="@+id/searchWordBtn"
+                android:layout_gravity="center_horizontal"/>
 
-    <Button
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:visibility="gone"
-        android:layout_below="@+id/answer"
-        android:text="Play Again"
-        android:id="@+id/playAgainBtn"
-        android:layout_gravity="center_horizontal"/>
+            <Button
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/answer"
+                android:text="Play Again"
+                android:visibility="gone"
+                android:id="@+id/playAgainBtn"
+                android:layout_gravity="center_horizontal"/>
+
+            <GridView
+                android:layout_width="wrap_content"
+                android:layout_height="110dp"
+                android:id="@+id/btnsGridView"
+                android:numColumns="10"
+                android:layout_alignParentBottom="true"
+                android:layout_alignParentLeft="true"
+                android:layout_alignParentStart="true"/>
+
+    </LinearLayout>
+
 </RelativeLayout>
